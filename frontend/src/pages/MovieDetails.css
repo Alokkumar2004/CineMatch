@@ -1,0 +1,61 @@
+/* src/pages/MovieDetails.css */
+.movie-details-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.details-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.details-poster {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.details-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-meta {
+  color: var(--text-muted);
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.watchlist-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.watchlist-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .details-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
