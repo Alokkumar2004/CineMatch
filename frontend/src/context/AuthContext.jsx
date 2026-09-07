@@ -14,12 +14,20 @@ export function AuthProvider({ children }) {
   const login = (userData) => {
     setUser(userData);
     localStorage.setItem('cinematch_user', JSON.stringify(userData));
+    
+    // NEW: Save the token separately so other pages know the user is logged in
+    if (userData.token) {
+      localStorage.setItem('cinematch_token', userData.token);
+    }
   };
 
   // Call this function when the user clicks Logout
   const logout = () => {
     setUser(null);
     localStorage.removeItem('cinematch_user');
+    
+    // NEW: Remove the token when they log out
+    localStorage.removeItem('cinematch_token');
   };
 
   return (
