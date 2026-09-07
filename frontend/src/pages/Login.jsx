@@ -18,7 +18,7 @@ function Login() {
 
     try {
       // 1. Send the data to our backend using Fetch API
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+     const response = await fetch('https://cinematch-backend-8ti6.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

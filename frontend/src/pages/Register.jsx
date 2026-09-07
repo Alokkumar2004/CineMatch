@@ -18,8 +18,8 @@ function Register() {
     setError(null);
 
     try {
-      // Send the data to our /register endpoint!
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      // Send the data to our live /register endpoint!
+      const response = await fetch('https://cinematch-backend-8ti6.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
